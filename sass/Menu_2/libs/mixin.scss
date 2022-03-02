@@ -77,7 +77,14 @@
             padding: 0;
             cursor: pointer;
             box-shadow: $box-shadow;   
-            overflow: hidden;      
+            overflow: hidden;
+            &:hover > .course-content_check{
+                display: flex;
+                animation: btn-check 1s ;
+                .icon-check{
+                    animation: icon-check 1s 250ms;
+                }
+            }
             @media screen and (min-width: 768px){
                 width: 500px;
             }
@@ -211,13 +218,7 @@
             width: 100%;
             min-width: 30%;
             padding: 15px 0px 0px 15px;
-            &:hover + .course-content_check{
-                display: flex;
-                animation: btn-check 1s ;
-                .icon-check{
-                    animation: icon-check 1s 250ms;
-                }
-            }
+            
         }
         @keyframes btn-check{
             0%{
