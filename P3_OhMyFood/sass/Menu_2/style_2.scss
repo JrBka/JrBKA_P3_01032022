@@ -1,0 +1,57 @@
+@import "libs/mixin.scss";
+@import "libs/variable.scss";
+
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+header{
+    @include header;
+    }
+main{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    .presentation-plate{ 
+        width:100%;
+        height: 280px;
+        position: relative;
+        @media screen and (min-width:768px){
+            height: 400px;
+        }
+        
+        .plate-preview{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 150%;
+            transform: translate(0%,-25%);
+            @media screen and (min-width:768px){
+                width: 100%;
+                height: 200%;
+                transform: translate(0%,-40%);
+            }
+        }
+    }
+    section{
+        background-color: $background-color;
+        margin-top: -50px;
+        padding: 20px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        @include heading;
+        @include course;
+        .btn-order{
+            display: flex;
+            justify-content: center;
+            margin: 25px 0px 25px 0px;
+            .btn{
+            @include btn-gradient;
+            }
+        }
+    }
+
+}
+.footer{
+    @include footer;
+}
