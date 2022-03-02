@@ -1,0 +1,332 @@
+@mixin header{
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    #logo{
+        width:50%;
+        max-width: 350px;
+        margin: 20px 0px 10px 0px;
+    }
+    .arrow{
+        position: absolute;
+        font-size: x-large;
+        left: 5%;
+        top:33%;
+        color: black;
+    }
+  }
+  @mixin heading {
+
+    .section_heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        .section-heading{
+        font-family: "Shrikhand";
+        font-weight: 400;
+        }
+        .btn--like{
+            font-size: 25px;
+            margin-right: 20px;
+            color: transparent;
+            -webkit-text-stroke-width: 1.2px;
+            -webkit-text-stroke-color: black;
+            font-weight: bold;
+            &:hover{
+                transition: color 2s ease-in-out;
+                background: -webkit-gradient(linear, left bottom,  left top, from($secondary), to($primary));
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-color:$primary;
+                cursor:pointer;
+            }
+            @media screen and (min-width: 768px){
+                margin-left: 50px;
+            }
+        }
+    }
+  }
+  @mixin course{
+       
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .heading{
+            font-size: 20px;
+            font-weight: normal;
+            border-bottom: 4px solid $tertiary;
+            width: 50px;
+            padding:10px 0px 10px 0px;
+        }
+        
+        .course{
+            background-color: white;
+            border-radius: 20px ;
+            border: none;
+            height: 75px;
+            width:100% ;
+            display: flex;
+            justify-content: start;
+            margin-bottom: 20px;
+            padding: 0;
+            cursor: pointer;
+            box-shadow: $box-shadow;   
+            overflow: hidden;      
+            @media screen and (min-width: 768px){
+                width: 500px;
+            }
+        }
+        .starter-course--1{
+            animation:menu-deroulant 2s ;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .starter-course--2{
+            animation:menu-deroulant 2s 250ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .starter-course--3{
+            animation:menu-deroulant 2s 500ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .starter-course--4{
+            animation:menu-deroulant 2s 750ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .main-course--1{
+            animation:menu-deroulant 2s ;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .main-course--2{
+            animation:menu-deroulant 2s 250ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .main-course--3{
+            animation:menu-deroulant 2s 500ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .dessert-course--1{
+            animation:menu-deroulant 2s ;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .dessert-course--2{
+            animation:menu-deroulant 2s 250ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        .dessert-course--3{
+            animation:menu-deroulant 2s 500ms both;
+            opacity: 0;
+            @keyframes menu-deroulant{
+                0%{
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .course-content_text{
+            width: 100%;
+            min-width: 30%;
+            padding: 15px 0px 0px 15px;
+            &:hover + .course-content_check{
+                display: flex;
+                animation: btn-check 1s ;
+                .icon-check{
+                    animation: icon-check 1s 250ms;
+                }
+            }
+        }
+        @keyframes btn-check{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        
+        }
+        
+        @keyframes icon-check{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+            .course-heading{
+                display: block;
+                text-align: start;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0;
+        }
+            .course-description{
+                margin:0;
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0px 5px 0px;
+                max-width: 350px;
+            }
+            .course-description_text{
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .course-price{
+                padding: 0px 20px 0px 20px;
+            }
+        
+        .course-content_check{
+            
+            min-width: 80px;
+            height: 100%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display:none;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
+            background-color: $tertiary;
+        }
+  }
+
+
+@mixin btn-gradient{
+    background: $gradient-color;
+    border-radius: 30px;
+    padding: 15px 40px 15px 40px;
+    color: white;
+    text-decoration: none;
+    box-shadow: $box-shadow;
+    &:hover{
+        background: $gradient-color-hover;
+        box-shadow: $box-shadow-hover;
+    }
+}
+@mixin footer{
+    background-color: lighten(black,20);
+    height: 230px;
+    max-width: 1300px;
+        margin: auto;
+    
+    &-heading{
+        font-family: "Shrikhand";
+        font-weight: 400;
+        color: white;
+        padding: 30px;
+        margin-bottom: 0;
+        margin-top:0;
+    }
+    &-lists{
+        list-style-type: none;
+        padding: 0px 20px 0px 30px;
+        margin-top: 0;
+        &_list{
+            padding-bottom: 10px;
+            width:fit-content;
+            a{
+                display: flex;
+                text-decoration: none;
+                color: white;
+                .footer-icon{
+                    display: flex;
+                    justify-content: center;
+                    width: 20px;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+            
+        
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "accueil" : "sass --watch ./sass/Accueil/style.scss:css/style.css",
+    "menu" : "sass --watch ./sass/Menu_2/style_2.scss:css/style_2.css",
+    "prefix" : "postcss ./css/style.css --use autoprefixer -d ./css "
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
