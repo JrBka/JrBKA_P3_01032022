@@ -84,10 +84,10 @@
             right: 10%;
             background-color: $tertiary;
             width: 20%;
-            padding: 5px;
+            padding: 8px 3px 8px 3px;
             color: darken($tertiary,40);
             font-weight: 500;
-            box-shadow: $box-shadow-new;
+            border-radius: 3px;
         }
 }
 
